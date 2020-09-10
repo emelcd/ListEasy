@@ -4,8 +4,10 @@
 
 document.getElementById("añadirBoton").addEventListener("click", añadirNota);
 
+
+
 let notas= [];
-myFunction()
+
 
 function tiempo(){
     var today = new Date();
@@ -25,31 +27,60 @@ function tiempo(){
 
 function añadirNota() {
     const color = document.querySelector('#añadirBoton');
-    let colorP = color.className
-    const nota = document.querySelector('#formulario').value;  
+    let colorP = color.className;
+    let selector = '';
+
+    
+    const nota = document.querySelector('#formulario').value + `  ` + `<button class='btn' onclick="deleteRow(this)">❌</button>`;  
+    
+    
+
+    var importancia = `<button class='${colorP} uncheckable' styles></button>`
+    
     const notaObj = {
-        id: tiempo(),
+        id:Date.now(),
+        dh: tiempo(),
+        imp: colorP,
         texto: nota
     }
+    console.log(notaObj) 
     notas = [...notas, notaObj];
-    var importancia = `<button class='${colorP} uncheckable' styles></button>`
-    console.log(importancia);
-    console.log(color);
-    console.log(colorP);
     var table = document.getElementById("tablanotas");
     var row = table.insertRow(1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
-    cell1.innerHTML = notaObj.id;
+
+       
+    cell1.innerHTML = notaObj.dh;
     cell2.innerHTML = importancia;
     cell3.innerHTML = notaObj.texto;
 
+    
+    var t = document.getElementById("tablanotas"), // This have to be the ID of your table, not the tag
+    d = t.getElementsByTagName("tr")[1].style.backgroundColor = "white";
+    v = t.getElementsByTagName("td")[3,2].style.textAlign = "left";
+
+    console.log(v);
+    
+    
+    
+    
+   
+
+
 }
 
-function myFunction() {
+function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("tablanotas").deleteRow(i);
+    
+    
+    
 
-  }
+}
+
+
 
 
 selectorColores()

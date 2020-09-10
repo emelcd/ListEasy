@@ -17,7 +17,7 @@
     <small class="text-muted">Listeasy App by MickiTicki</small>
 
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Añadir Nota" aria-label="Recipient's username" aria-describedby="basic-addon2" id="formulario">
+        <input type="text" class="form-control" placeholder="Añadir Nota (Admite HTML)" aria-label="Recipient's username" aria-describedby="basic-addon2" id="formulario">
         <div class="input-group-append">
           <button class="btn btn-warning" type="submit" id="añadirBoton" >Añadir</button>
         </div>
@@ -46,12 +46,18 @@
           <th scope="col">Descripción</th>
         </tr>
       </thead>
-      <tbody class="tbody">
+      <tbody class="tbody" id='tbodyS'>
         <tr>
-          <th scope="row">1</th>
-          <td class="align-middle">Mark</td>
+          <th scope="row">10-9-2020-15:33:31</th>
+          <td class="align-middle"><button class='btn btn-primary' styles></button></td>
 
-          <td class="align-middle">@mdo</td>
+          <td class='ajuste-izquierda'><strong>ListEasy</strong>  V.0.2
+            <ul>
+              <li>🛎 Poner Email</li>
+              <li>🛎 Añadir LocalStorage</li>
+            </ul>
+            <button class='btn' onclick="deleteRow(this)">❌</button>
+          </td>
         </tr>
 
       </tbody>

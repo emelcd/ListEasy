@@ -25,13 +25,14 @@ body {
     
 }
 
-.tbody {
+#tbodyS {
     background-color: white;
-
+    
 }
 
 .table {
     margin-top: 10px;
+    text-align: center;
 }
 
 .display-4 {
@@ -44,5 +45,9 @@ body {
     pointer-events: none;
     padding: 10%;
     border-radius: 50px;
-    margin-left: 30px;
+
+}
+
+.ajuste-izquierda {
+    text-align: left;
 }
