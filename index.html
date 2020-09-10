@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  
 </head>
 <body>
 
@@ -56,13 +57,13 @@
               <li>🛎 Poner Email</li>
               <li>🛎 Añadir LocalStorage</li>
             </ul>
-            <button class='btn' onclick="deleteRow(this)">❌</button>
+            <button class='btn ajuste-borrar' onclick="deleteRow(this)">❌</button>
           </td>
         </tr>
 
       </tbody>
     </table>
-        <!-- Content here -->
+    <button class="btn btn-primary email" onclick="sendEmail()">Enviar Correo</button>    <!-- Content here -->
     </div>
 
     

@@ -1,13 +1,5 @@
-
-
-
-
 document.getElementById("añadirBoton").addEventListener("click", añadirNota);
-
-
-
 let notas= [];
-
 
 function tiempo(){
     var today = new Date();
@@ -23,7 +15,7 @@ function tiempo(){
 
 
     }
-    
+  
 
 function añadirNota() {
     const color = document.querySelector('#añadirBoton');
@@ -32,9 +24,6 @@ function añadirNota() {
 
     
     const nota = document.querySelector('#formulario').value + `  ` + `<button class='btn' onclick="deleteRow(this)">❌</button>`;  
-    
-    
-
     var importancia = `<button class='${colorP} uncheckable' styles></button>`
     
     const notaObj = {
@@ -43,6 +32,7 @@ function añadirNota() {
         imp: colorP,
         texto: nota
     }
+
     console.log(notaObj) 
     notas = [...notas, notaObj];
     var table = document.getElementById("tablanotas");
@@ -61,7 +51,7 @@ function añadirNota() {
     d = t.getElementsByTagName("tr")[1].style.backgroundColor = "white";
     v = t.getElementsByTagName("td")[3,2].style.textAlign = "left";
 
-    console.log(v);
+    parsernotas()
     
     
     
@@ -74,23 +64,15 @@ function añadirNota() {
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementById("tablanotas").deleteRow(i);
-    
-    
-    
 
 }
-
-
-
-
+/*  SELECTOR COLORES DE BOTONES*/
 selectorColores()
-
 function selectorColores() {
     cambiarColor1();
     cambiarColor2();
     cambiarColor3();
 }
-
 function cambiarColor1() {
     var colorboton = document.querySelector('#option1').addEventListener('click', cambiarBoton1);
     
@@ -102,7 +84,6 @@ function cambiarBoton1(){
     colorbtnañadir.classList.add("btn-warning");
       
 }
-
 function cambiarColor2() {
     var colorboton = document.querySelector('#option2').addEventListener('click', cambiarBoton2);
     
@@ -114,7 +95,6 @@ function cambiarBoton2(){
     colorbtnañadir.classList.add("btn-danger");
       
 }
-
 function cambiarColor3() {
     var colorboton = document.querySelector('#option3').addEventListener('click', cambiarBoton3);
     
@@ -125,4 +105,25 @@ function cambiarBoton3(){
     colorbtnañadir.classList.add("btn");
     colorbtnañadir.classList.add("btn-success");
       
+}
+/* ENVIAR EMAIL */
+function parsernotas() {
+        var x = JSON.parse(notas);
+        console.log(x);
+}
+
+
+function sendEmail() {
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "mick.altura@gmail.com",
+        Password : "172BC0AEE2BE606879DACDE8633D0B3EA94E",
+        To : 'mick.altura@gmail.com',
+        From : "mick.altura@gmail.com",
+        Subject : `Generado por ListEasy (${tiempo()})`,
+        Body : `${notas}`
+    }).then(
+      message => alert(message)
+    );
+
 }
