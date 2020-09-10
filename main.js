@@ -33,7 +33,7 @@ function añadirNota() {
         texto: nota
     }
 
-    console.log(notaObj) 
+    
     notas = [...notas, notaObj];
     var table = document.getElementById("tablanotas");
     var row = table.insertRow(1);
@@ -50,15 +50,7 @@ function añadirNota() {
     var t = document.getElementById("tablanotas"), // This have to be the ID of your table, not the tag
     d = t.getElementsByTagName("tr")[1].style.backgroundColor = "white";
     v = t.getElementsByTagName("td")[3,2].style.textAlign = "left";
-
-    parsernotas()
-    
-    
-    
-    
-   
-
-
+    return notaObj
 }
 
 function deleteRow(r) {
@@ -107,10 +99,7 @@ function cambiarBoton3(){
       
 }
 /* ENVIAR EMAIL */
-function parsernotas() {
-        var x = JSON.parse(notas);
-        console.log(x);
-}
+
 
 
 function sendEmail() {
@@ -121,7 +110,7 @@ function sendEmail() {
         To : 'mick.altura@gmail.com',
         From : "mick.altura@gmail.com",
         Subject : `Generado por ListEasy (${tiempo()})`,
-        Body : `${notas}`
+        Body : ``
     }).then(
       message => alert(message)
     );
