@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Grandstander', cursive;
+}
+
+body {
+    background-color: #0F8B8D;
+    text-justify: auto;
+    
+    
+}
+
+.display-4 {
+    color: aliceblue;
+}
+
+.container, .march {
+    border-radius: 25px;
+    margin-top: 10px;
+    
+    background-color: #143642;
+    padding: 10px;
+    
+    
+}
+
+.tbody {
+    background-color: white;
+
+}
+
+#table {
+    border-radius: 25px;
+}
+
+.display-4 {
+    text-align: center;
+}
+
+
+
+
