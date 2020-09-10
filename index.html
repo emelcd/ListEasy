@@ -22,7 +22,18 @@
           <button class="btn btn-warning" type="submit" id="añadirBoton" >Añadir</button>
         </div>
       </div>
-    <table class="table">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" id="botones">
+        <label class="btn btn-warning active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Normal
+        </label>
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Importante
+        </label>
+        <label class="btn btn-success">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Otros
+        </label>
+    </div>
+    <table class="table" id="tablanotas">
         <colgroup>
             <col span="1" style="width: 15%;">
             <col span="1" style="width: 15%;">
@@ -31,8 +42,7 @@
     <thead class="thead-dark">
         <tr>
           <th scope="col">Día y Hora</th>
-          <th scope="col">Tema</th>
-
+          <th scope="col">Importancia</th>
           <th scope="col">Descripción</th>
         </tr>
       </thead>
@@ -43,18 +53,7 @@
 
           <td class="align-middle">@mdo</td>
         </tr>
-        <tr>
-          <th scope="row" class="align-middle">2</th>
-          <td class="align-middle">Jacob</td>
 
-          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officiis nostrum dolorum dolores. Quam ipsa placeat ex maiores obcaecati, minima necessitatibus ad soluta hic nemo ullam iste non eligendi accusamus corrupti dolores beatae optio minus incidunt doloribus delectus reprehenderit pariatur dicta? Eaque omnis cumque, ea voluptate nihil architecto repudiandae impedit laudantium, quasi doloremque qui, ipsa et! Impedit modi magnam excepturi minima dolores facere magni, est nisi? Reiciendis provident sapiente est!</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-
-          <td>@twitter</td>
-        </tr>
       </tbody>
     </table>
         <!-- Content here -->

@@ -30,8 +30,8 @@ body {
 
 }
 
-#table {
-    border-radius: 25px;
+.table {
+    margin-top: 10px;
 }
 
 .display-4 {
@@ -40,4 +40,9 @@ body {
 
 
 
-
+.uncheckable {
+    pointer-events: none;
+    padding: 10%;
+    border-radius: 50px;
+    margin-left: 30px;
+}
