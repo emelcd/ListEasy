@@ -34,7 +34,7 @@ function añadirNota() {
     var importancia = `<button class='${colorP} uncheckable' styles></button>`
     
     const notaObj = {
-        id:Date.now(),
+        id: Date.now(),
         dh: tiempo(),
         imp: colorPArray,
         texto: nota
@@ -58,8 +58,7 @@ function añadirNota() {
     d = t.getElementsByTagName("tr")[1].style.backgroundColor = "white";
     v = t.getElementsByTagName("td")[3,2].style.textAlign = "left";
 
-    var obj = notaObj.texto;
-    console.log(obj)
+
     
 }
 
