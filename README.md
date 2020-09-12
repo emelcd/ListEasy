@@ -20,3 +20,19 @@ v0.5
 
 ?Crear un nuevo objeto para el email
 
+v.0.6
+
+            <ul> Por Hacer:
+              <li>🟨 Pasar las notas en el cuerpo del email - formateadas</li>
+              <li>🟨 Añadir LocalStorage</li>
+              <li>🟨 Opción de Previsualizar el Email y Cambiar la Dirección de Destino</li>
+              <li>🟨 Página 404 - Animación</li>
+
+            </ul>
+            <ul> Hechas:
+              <li>✅ Maquetación Bootsrap</li>
+              <li>✅ Selector de Importancia (Color con Cambio Dinámico)</li>
+              <li>✅ Función Email</li>
+
+            </ul>
+

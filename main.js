@@ -59,6 +59,9 @@ function añadirNota() {
     d = t.getElementsByTagName("tr")[1].style.backgroundColor = "white";
     v = t.getElementsByTagName("td")[3,2].style.textAlign = "left";
 
+    document.querySelector("#sendEmailButton").style.display = 'block';
+    document.querySelector('#notasdeVersion').click();
+
 
 }
 
@@ -108,6 +111,8 @@ function cambiarBoton3(){
       
 }
 /* ENVIAR EMAIL */
+
+
 
 
 

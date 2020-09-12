@@ -16,7 +16,11 @@
     <div class="container march">
     <h1 class="display-4">🗒 Listeasy 🗒</h1>
     <small class="text-muted">Listeasy App by MickiTicki</small>
-
+    <div class="col-md-4">
+      <canvas id="canvas" width="300" height="50">
+        Sorry, your browser doesn't support the &lt;canvas&gt; element.
+      </canvas>
+    </div> <!-- /col-md-4 -->
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Añadir Nota (Admite HTML)" aria-label="Recipient's username" aria-describedby="basic-addon2" id="formulario">
         <div class="input-group-append">
@@ -49,22 +53,34 @@
       </thead>
       <tbody class="tbody" id='tbodyS'>
         <tr>
-          <th scope="row">10-9-2020-15:33:31</th>
+          <th scope="row"></th>
           <td class="align-middle"><button class='btn btn-primary' styles></button></td>
 
-          <td class='ajuste-izquierda'><strong>ListEasy</strong>  V.0.3
-            <ul>
-              <li>🛎 Pasar las notas en el cuerpo del email - formateadas</li>
-              <li>🛎 Añadir LocalStorage</li>
+          <td class='ajuste-izquierda'><h2>ListEasy</h2><strong>V.0.6</strong> 
+            <ul> Por Hacer:
+              <li>🟨 Pasar las notas en el cuerpo del email - formateadas</li>
+              <li>🟨 Añadir LocalStorage</li>
+              <li>🟨 Opción de Previsualizar el Email y Cambiar la Dirección de Destino</li>
+              <li>🟨 Página 404 - Animación</li>
+
             </ul>
-            <button class='btn ajuste-borrar' onclick="deleteRow(this)">❌</button>
+            <ul> Hechas:
+              <li>✅ Maquetación Bootsrap</li>
+              <li>✅ Selector de Importancia (Color con Cambio Dinámico)</li>
+              <li>✅ Función Email</li>
+
+            </ul>
+            <button class='btn' onclick="deleteRow(this)" id="notasdeVersion">❌</button>`
           </td>
         </tr>
 
       </tbody>
     </table>
-    <button class="btn btn-primary email" onclick="sendEmail()" id="sendEmailButton">Enviar Correo</button>    <!-- Content here -->
+    <div class="botonesContenedor" style="text-align: right">
+    <button class="btn btn-primary email" onclick="sendEmail()" id="sendEmailButton">Enviar Notas por Correo</button>
+    <button class="btn btn-secondary" onclick="location.href='./index.html';">Previsualizar</button>    <!-- Content here -->
     </div>
+  </div>
 
     
 
