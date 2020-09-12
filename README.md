@@ -1,4 +1,4 @@
-#ListEasy
+ ##🗒 Listeasy 🗒
 
 v.0.1
 
@@ -22,12 +22,13 @@ v0.5
 
 v.0.6
 
-            Por Hacer:
+            Horizonte Lejano:
+            🟥 Opción de Previsualizar el Email y Cambiar la Dirección de Destino
+
+            Horizonte Cercano:
             🟨 Pasar las notas en el cuerpo del email - formateadas
             🟨 Añadir LocalStorage
-            🟨 Opción de Previsualizar el Email y Cambiar la Dirección de Destino
             🟨 Página 404 - Animación
-
             
             Hechas:
             ✅ Maquetación Bootsrap
