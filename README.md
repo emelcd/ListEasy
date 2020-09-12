@@ -31,14 +31,24 @@
 v.0.6
 
 - Horizonte Lejano:
- - 🟥 Opción de Previsualizar el Email
+
+  🟥 Opción de Previsualizar el Email
+
 - Horizonte Cercano:
- - 🟨 Pasar las notas en el cuerpo del email - formateadas
- - 🟨 Añadir LocalStorage
- - 🟨 Página 404 - Animación
+
+  🟨 Pasar las notas en el cuerpo del email - formateadas
+
+  🟨 Añadir LocalStorage
+
+  🟨 Página 404 - Animación
+
 - Horizonte Alcanzado:
- - ✅ Maquetación Bootsrap
- - ✅ Selector de Importancia (Color con Cambio Dinámico)
- - ✅ Función Ema
+
+  ✅ Maquetación Bootsrap
+
+  ✅ Selector de Importancia (Color con Cambio Dinámico)
+
+  ✅ Función Ema
             
+
 
