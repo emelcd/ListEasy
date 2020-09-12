@@ -20,7 +20,14 @@ function tiempo(){
 function añadirNota() {
     const color = document.querySelector('#añadirBoton');
     let colorP = color.className;
-    let selector = '';
+    let colorPArray = '';
+    if (colorP == 'btn btn-warning') {
+        colorPArray = 'Nota Normal';
+    } else if (colorP == 'btn btn-danger'){
+        colorPArray = 'Nota Importante';
+    } else {
+        colorPArray = 'Nota Otros';
+    }
 
     
     const nota = document.querySelector('#formulario').value + `  ` + `<button class='btn' onclick="deleteRow(this)">❌</button>`;  
@@ -29,7 +36,7 @@ function añadirNota() {
     const notaObj = {
         id:Date.now(),
         dh: tiempo(),
-        imp: colorP,
+        imp: colorPArray,
         texto: nota
     }
 
@@ -50,7 +57,10 @@ function añadirNota() {
     var t = document.getElementById("tablanotas"), // This have to be the ID of your table, not the tag
     d = t.getElementsByTagName("tr")[1].style.backgroundColor = "white";
     v = t.getElementsByTagName("td")[3,2].style.textAlign = "left";
-    return notaObj
+
+    var obj = notaObj.texto;
+    console.log(obj)
+    
 }
 
 function deleteRow(r) {
@@ -103,6 +113,7 @@ function cambiarBoton3(){
 
 
 function sendEmail() {
+    
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "mick.altura@gmail.com",
@@ -116,3 +127,13 @@ function sendEmail() {
     );
 
 }
+
+var input = document.querySelector('#formulario');
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("añadirBoton").click();
+  }
+});
+
