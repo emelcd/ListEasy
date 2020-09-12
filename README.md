@@ -25,10 +25,14 @@
 
 # v0.5
 
-- 
+- Añadida Ruta de Horizontes 
 
 
-v.0.6
+# v.0.7
+
+- Actual
+
+* * *
 
 - Horizonte Lejano:
 
@@ -51,4 +55,4 @@ v.0.6
   ✅ Función Ema
             
 
-
+* * *
