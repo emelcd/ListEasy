@@ -61,3 +61,12 @@ body {
 #notasdeVersion {
     opacity: 0;
 }
+.btn-group-toggle{
+    border-radius: 25px;
+}
+
+.btn-group-toggle:hover {
+    background-color: #0069D9;
+    transition-delay:200ms;
+    
+}
