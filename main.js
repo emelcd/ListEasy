@@ -1,6 +1,7 @@
 document.getElementById("añadirBoton").addEventListener("click", añadirNota);
 let notas= [];
 
+
 function tiempo(){
     var today = new Date();
     var dd = today.getDate();
@@ -30,7 +31,7 @@ function añadirNota() {
     }
 
     
-    const nota = document.querySelector('#formulario').value + `  ` + `<button class='btn' onclick="deleteRow(this)">❌</button>`;  
+    const nota = document.querySelector('#formulario').value;  
     var importancia = `<button class='${colorP} uncheckable' styles></button>`
     
     const notaObj = {
@@ -48,18 +49,17 @@ function añadirNota() {
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
 
-       
+    var textoTransformado = notaObj.texto  + `  ` + `<button class='btn' onclick="deleteRow(this)">❌</button>`; 
     cell1.innerHTML = notaObj.dh;
     cell2.innerHTML = importancia;
-    cell3.innerHTML = notaObj.texto;
+    cell3.innerHTML = textoTransformado;
 
     
-    var t = document.getElementById("tablanotas"), // This have to be the ID of your table, not the tag
+    var t = document.getElementById("tablanotas"),
     d = t.getElementsByTagName("tr")[1].style.backgroundColor = "white";
     v = t.getElementsByTagName("td")[3,2].style.textAlign = "left";
 
 
-    
 }
 
 function deleteRow(r) {
@@ -112,7 +112,7 @@ function cambiarBoton3(){
 
 
 function sendEmail() {
-    
+
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "mick.altura@gmail.com",
@@ -120,7 +120,7 @@ function sendEmail() {
         To : 'mick.altura@gmail.com',
         From : "mick.altura@gmail.com",
         Subject : `Generado por ListEasy (${tiempo()})`,
-        Body : ``
+        Body : `${JSON.stringify(notas)}`
     }).then(
       message => alert(message)
     );
