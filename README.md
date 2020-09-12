@@ -1,6 +1,8 @@
- ##🗒 Listeasy 🗒
 
-v.0.1
+
+## 🗒 Listeasy 🗒
+
+# v.0.1
 
 Maquetación y puesta en marcha de la lista
 
