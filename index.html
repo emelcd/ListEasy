@@ -16,11 +16,15 @@
     <div class="container march">
     <h1 class="display-4">🗒 Listeasy 🗒</h1>
     <small class="text-muted">Listeasy App by MickiTicki</small>
-    <div class="col-md-4">
-      <canvas id="canvas" width="300" height="50">
-        Sorry, your browser doesn't support the &lt;canvas&gt; element.
-      </canvas>
-    </div> <!-- /col-md-4 -->
+    <div class="popup-wrapper">
+      <div class="popup">
+          <div class="popup-close">x</div>
+          <div class="popup-content" id="popNotas" >
+              <h3>Resumen de las Notas a Enviar</h3>
+
+          </div>
+      </div>
+    </div>
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Añadir Nota (Admite HTML)" aria-label="Recipient's username" aria-describedby="basic-addon2" id="formulario">
         <div class="input-group-append">
@@ -56,7 +60,7 @@
           <th scope="row"></th>
           <td class="align-middle"><button class='btn btn-primary' styles></button></td>
 
-          <td class='ajuste-izquierda'><h2>ListEasy</h2><strong>V.0.7</strong> 
+          <td class='ajuste-izquierda'><h2>ListEasy</h2><strong>V.0.8</strong> 
             
             <ul><button class="btn btn-group-toggle" onclick="location.href='https://github.com/mickiticki/ListEasy/blob/master/README.md#-listeasy-'"> Ver el changelog </button>
             </ul>
@@ -68,7 +72,7 @@
     </table>
     <div class="botonesContenedor" style="text-align: right">
     <button class="btn btn-primary email" onclick="sendEmail()" id="sendEmailButton">Enviar Notas por Correo</button>
-    <button class="btn btn-secondary" onclick="location.href='./index.html';">Previsualizar</button>    <!-- Content here -->
+    <button class="btn btn-secondary" id="botonPrevisualizar"">Previsualizar</button>    <!-- Content here -->
     </div>
   </div>
 

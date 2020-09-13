@@ -33,17 +33,23 @@
 
 ## v.0.7
 
-- Actual
+- Añadida opción de previsualizar el Email
+- Añadida cuerpo del email semiformateado
+
+## v.0.8
+
+- DEV:
 
 * * *
-
 - Horizonte Lejano:
 
-  🟥 Opción de Previsualizar el Email
+  🟥 Animaciones
+
+  🟥 Posiblidad de Ordenar las Notas (Grab and Move)
 
 - Horizonte Cercano:
 
-  🟨 Pasar las notas en el cuerpo del email - formateadas
+  🟨 
 
   🟨 Añadir LocalStorage
 
@@ -56,6 +62,8 @@
   ✅ Selector de Importancia (Color con Cambio Dinámico)
 
   ✅ Función Ema
-            
 
+  ✅ Opción de Previsualizar el Email
+
+  ✅ Pasar las notas en el cuerpo del email - formateadas (Falta algo de formateo)
 * * *
