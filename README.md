@@ -49,7 +49,11 @@
 
 - Horizonte Cercano:
 
-  🟨 
+  🟨 Borrar del Objeto las Notas Eliminadas
+ 
+  🟨 Añadir Emvail para Enviar
+
+  🟨 Añadir Advertencia al Elimnar las Notas
 
   🟨 Añadir LocalStorage
 

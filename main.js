@@ -10,7 +10,7 @@ function tiempo(){
     var hh = today.getHours()-1;
     var mmm = today.getMinutes();
     var ss = today.getSeconds();
-    today = dd+'/'+mm+'/'+yyyy+'<br>'+hh+':'+mmm+':'+ss;
+    today = dd+'/'+mm+'/'+yyyy+'-'+hh+':'+mmm+':'+ss;
     return today;
     } 
 function añadirNota() {
@@ -63,12 +63,17 @@ function añadirNota() {
         document.querySelector('#notasdeVersion').click();
     }
     
-    
+    console.log(notas)
 
 }
 function deleteRow(r) {
+    
     var i = r.parentNode.parentNode.rowIndex;
+
+    
     document.getElementById("tablanotas").deleteRow(i);
+    console.log(notas)
+    
 }
 /*  SELECTOR COLORES DE BOTONES*/
 selectorColores()
@@ -166,15 +171,16 @@ function createPrev(data){
     
     for (i = 0; i < notas.length; i++) {
         var prueba = `
+        
         <ul>
-        <il><strong>${data[i].imp}:</strong></il>
+        <il><strong>${data[i].imp} [${data[i].dh}]:</strong></il>
         <il>${data[i].texto}</il>
         </ul>
         `
         popdata.innerHTML += prueba;
         
     }
-    console.log (prueba)
+    
     return prueba
     
 }
