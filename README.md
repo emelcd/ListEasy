@@ -2,6 +2,8 @@
 
 # **🗒 Listeasy 🗒**
 
+![image info](./assets/mainListEasy.png)
+
 ## v.0.1
 
 - Maquetación BootsTrap
@@ -71,3 +73,4 @@
 
   ✅ Pasar las notas en el cuerpo del email - formateadas (Falta algo de formateo)
 * * *
+

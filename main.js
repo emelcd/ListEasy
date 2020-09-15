@@ -62,19 +62,44 @@ function añadirNota() {
     if (document.querySelector('#notasdeVersion') !== null) {
         document.querySelector('#notasdeVersion').click();
     }
-    
-    console.log(notas)
 
 }
+
+
+ 
+
+
+
 function deleteRow(r) {
-    
     var i = r.parentNode.parentNode.rowIndex;
+    var c1 = document.getElementById("tablanotas").rows[i].cells.item(0).innerHTML;
+
+    document.getElementById("tablanotas").deleteRow(i);
 
     
-    document.getElementById("tablanotas").deleteRow(i);
-    console.log(notas)
+    for (var i = 0; i < notas.length; i++) {
+        var c2 = JSON.stringify(notas[i].dh);
+        var c3 = c2.slice(1, -1);
+        console.log(c3)
+        if (c3 == c1) {
+            console.log('aleluya')
+        }
+     }
     
+    
+    
+/*     var c3 = c2.slice(1, -1);
+    console.log(c3)
+    console.log(JSON.stringify(notas[0])) */
 }
+
+
+
+
+/* function borrarNotas (d){
+    console.log(d)
+    notas = notas.filter(notas => notas.dh !== dh)
+} */
 /*  SELECTOR COLORES DE BOTONES*/
 selectorColores()
 function selectorColores() {
@@ -184,3 +209,5 @@ function createPrev(data){
     return prueba
     
 }
+
+
