@@ -1,6 +1,6 @@
 
 
-# **🗒 Listeasy 🗒**
+#                 **🗒 Listeasy 🗒**
 
 ![image info](./assets/mainListEasy.png)
 
