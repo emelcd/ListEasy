@@ -144,11 +144,11 @@ function cambiarBoton3(){
 function sendEmail() {
 
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "mick.altura@gmail.com",
-        Password : "172BC0AEE2BE606879DACDE8633D0B3EA94E",
-        To : 'mick.altura@gmail.com',
-        From : "mick.altura@gmail.com",
+        Host : "",
+        Username : "",
+        Password : "",
+        To : '',
+        From : "",
         Subject : `Generado por ListEasy (${tiempo()})`,
         Body : `${createPrev(notas)}`
     }).then(
