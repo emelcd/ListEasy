@@ -178,12 +178,13 @@ buttonM.addEventListener('click', () => {
  
 close.addEventListener('click', () => {
     popup.style.display = 'none';
+    prueba = "";
 });
  
 popup.addEventListener('click', e => {
     // console.log(e);
     if(e.target.className === 'popup-wrapper') {
-        popup.style.display = 'none';
+        
     }
 });
 
@@ -192,9 +193,10 @@ popup.addEventListener('click', e => {
 function createPrev(data){
     
     var popdata = document.querySelector('#popNotas');
-    
+    popdata.innerHTML = "";
     
     for (i = 0; i < notas.length; i++) {
+        
         var prueba = `
         
         <ul>
